@@ -1,0 +1,27 @@
+<div id="bottomB" class="width">
+  <div class="bottom">
+    <div class="bottomL">
+      {dede:channelartlist typeid='top' row='8'}
+	  <ul>
+		{dede:channelartlist typeid='top' row='8'}
+		<li class='strong'><a href='{dede:field name='typeurl'/}'>{dede:field name='typename' /}</a></li>
+        {dede:channel type='son' noself='yes'}
+		<li><a href='[field:typelink/]'>[field:typename/]</a></li>
+		{/dede:channel}
+      </ul>
+	  {/dede:channelartlist}
+    </div>
+    <div class="bottomR">
+      <div class="strong">Contact</div>
+      <p>{dede:global.cfg_zxdh/}</p>
+      <div class="link"><A href="#" class="n1"></A><A href="#" class="n2"></A><A href="#" class="n3"> <span><img src="/skin/images/wex.jpg" width="120" height="120" /></span></A></div>
+    </div>
+  </div>
+</div>
+<div id="footer" class="width">
+  <div class="foot">
+    <div class="right"><a href="/a/about/">关于我们</a><span>|</span><a href="/sitemap.html">网站地图</a><span>|</span><a href="/a/lianxi/">联系我们</a></div>
+    <div class="icp">{dede:global.cfg_banquan/}<span>|</span>{dede:global.cfg_beian/}<span>|</span>By
+      the <a href="//zhanoo.com">zhanoo.com</a> </div>
+  </div>
+</div>

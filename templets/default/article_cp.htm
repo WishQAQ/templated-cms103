@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:field.title/}-{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link rel="shortcut icon" type="image/x-icon" href="/skin/images/favicon.ico" media="screen" />
+<link type="text/css" rel="stylesheet" href="/skin/css/global.css"/>
+<link type="text/css" rel="stylesheet" href="/skin/css/style2.css" />
+<script type="text/javascript" language="javascript" src="/skin/js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="/skin/js/index.js"></script>
+<script type="text/javascript" src="/skin/js/lrtk.js"></script>
+</head>
+<body>
+{dede:include filename="head.htm"/}
+<div id="banner" class="width"><img src='/skin/images/bn_chanpin_02.jpg' width='1860' height='264'/></div>
+<div id="center" class="width">
+  <div id="main">
+    <div class="left">
+      <div class='title'>
+        <h2>产品服务</h2>
+        <span>Services</span></div>
+      <div class="menu">
+        <ul>
+          {dede:channel row="10" type="son" col="1" currentstyle="<li class='cur'><a href='~typelink~' ~rel~>~typename~</a></li>" }
+		  <li><a href='[field:typeurl/]'>[field:typename/]</a></li>
+		  {/dede:channel}
+        </ul>
+      </div>
+     <div class="add"> <a href="/a/chanpin/"><img src="/skin/images/12_19.jpg" /></a> </div>
+    </div>
+    <div class="right">
+      <div class="crumbs">{dede:field name='position'/}</div>
+      <div class="news_list">
+        <div class="news_XQ">
+          <h1>{dede:field.title/}</h1>
+          <DIV class="span">来源：{dede:field.source/}</DIV>
+          {dede:field.body/}
+          <div class="fen">
+            <div class="bshare-custom"><a title="分享到QQ空间" class="bshare-qzone"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到人人网" class="bshare-renren"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="分享到网易微博" class="bshare-neteasemb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a><span class="BSHARE_COUNT bshare-share-count">0</span></div>
+            <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&uuid=&pophcol=2&lang=zh"></script>
+            <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{dede:include filename="footer.htm"/}<script>
+	document.getElementById(14).className='cur';
+</script>
+</body>
+</html>

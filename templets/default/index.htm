@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="shortcut icon" type="image/x-icon" href="skin/images/favicon.ico" media="screen" />
+<link type="text/css" rel="stylesheet" href="skin/css/global.css"/>
+<link type="text/css" rel="stylesheet" href="skin/css/style.css" />
+<script type="text/javascript" language="javascript" src="skin/js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="skin/js/index.js"></script>
+<script type="text/javascript" src="skin/js/lrtk.js"></script>
+<script type="text/javascript" language="javascript" src="skin/js/index2.js"></script>
+<script type="text/javascript" language="javascript" src="skin/js/jquery.DB_tabMotionBanner.min.js"></script>
+</head>
+<body>
+{dede:include filename="head.htm"/}
+<div id="banner" class="width">
+  <div class="DB_tab25">
+    <ul class="DB_bgSet">
+      <li style="background:url('/skin/banner/banner_02.jpg') no-repeat 49% 0"></li>
+      <li style="background:url('/skin/banner/banner2_02.png') no-repeat 49% 0"></li>
+      <li style="background:url('/skin/banner/banner3_02.jpg') no-repeat 49% 0"></li>
+    </ul>
+    <ul class="DB_imgSet">
+      <li> <img class="DB_1_1" src="skin/images/wenzi_04.png" alt=""/> <img class="DB_1_2" src="skin/images/wenzi_06.png" alt=""/> <img class="DB_1_3" src="skin/images/wenzi_08.png" alt=""/> </li>
+      <li> <img class="DB_2_1" src="skin/images/wenzi2_04.png" alt=""/> <img class="DB_2_2" src="skin/images/wenzi2_07.png" alt=""/> <img class="DB_2_3" src="skin/images/wenzi2_09.png" alt=""/> </li>
+      <li> <img class="DB_3_1" src="skin/images/wenzi3_04.png" alt=""/> <img class="DB_3_2" src="skin/images/wenzi3_07.png" alt=""/> <img class="DB_3_3" src="skin/images/wenzi3_09.png" alt=""/> </li>
+    </ul>
+    <div class="DB_menuWrap">
+      <ul class="DB_menuSet">
+		</ul>
+      <div class="DB_next"><img src="skin/images/nextArrow.png" alt="NEXT"/></div>
+      <div class="DB_prev"><img src="skin/images/prevArrow.png" alt="PREV"/></div>
+    </div>
+  </div>
+</div>
+<div id="product" class="width">
+  <div class="lie">
+    <ul>
+        {dede:arclist typeid='10'  row=4 titlelen=20 orderby='pubdate' }
+	    <li><a href="[field:arcurl/]">
+        <dl>
+          <dt><img src="[field:picname/]" width="124" height="121" /><span>产品</span></dt>
+          <dd>[field:title/]</dd>
+        </dl>
+        </a> 
+		</li>
+		{/dede:arclist}
+    </ul>
+  </div>
+</div>
+<div id="news" class="width">
+  <div class="right">
+    <h2>新闻中心<span>News</span></h2>
+    <div class="videoMove" id="scrollDiv" >
+      <ul>
+        {dede:arclist typeid='10'  row=10 titlelen=30 orderby='pubdate' }
+		<li><a href="[field:arcurl/]">[field:title/]</a><span>[field:pubdate function="MyDate('Y-m-d',@me)"/]</span></li>
+		{/dede:arclist}
+      </ul>
+    </div>
+  </div>
+</div>
+{dede:include filename="footer.htm"/}
+</body>
+<script type="text/javascript">
+
+$('.DB_tab25').DB_tabMotionBanner({
+
+	key:'b28551',
+
+	autoRollingTime:10000,                            
+
+	bgSpeed:500,
+
+	motion:{
+
+		DB_1_1:{left:-50,opacity:0,speed:1000,delay:500},
+
+		DB_1_2:{left:-50,opacity:0,speed:1000,delay:1000},
+
+		DB_1_3:{left:-50,opacity:0,speed:1000,delay:1500},
+
+		
+
+		DB_2_1:{top:50,opacity:0,speed:1000,delay:500},
+
+		DB_2_2:{top:50,opacity:0,speed:1000,delay:1000},
+
+		DB_2_3:{top:50,opacity:0,speed:1000,delay:1500},
+
+		
+
+		DB_3_1:{left:-50,opacity:0,speed:1000,delay:500},
+
+		DB_3_2:{left:-50,opacity:0,speed:1000,delay:1000},
+
+		DB_3_3:{left:-50,opacity:0,speed:1000,delay:1500},
+
+		
+
+		end:null
+
+	}
+
+})
+
+</script>
+</html>

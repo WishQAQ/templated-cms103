@@ -1,0 +1,19 @@
+<div id="header" class="width">
+  <div class="head">
+    <div class="logo"><a href="/"><img src="/skin/images/logo.jpg" /></a></div>
+    <div class="nav">
+      <ul>
+		<li><a class="a" href="/">网站首页</a></li>
+        {dede:channelartlist typeid='top' row='8'}
+		<li><a class='a' href='{dede:field name='typeurl'/}'>{dede:field name='typename' /}</a>
+          <div class='erji'>
+		    {dede:channel type='son' noself='yes'}
+            <p><a href='[field:typelink/]'>[field:typename/]</a></p>
+			{/dede:channel}
+          </div>
+        </li>
+		{/dede:channelartlist}
+      </ul>
+    </div>
+  </div>
+</div>

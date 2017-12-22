@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:global.cfg_webname/}-地图</title>
+<meta name="keywords" content="" />
+<meta name="description" content=""/>
+<link rel="shortcut icon" type="image/x-icon" href="/skin/images/favicon.ico" media="screen" />
+<link type="text/css" rel="stylesheet" href="/skin/css/global.css"/>
+<link type="text/css" rel="stylesheet" href="/skin/css/style2.css" />
+<script type="text/javascript" language="javascript" src="/skin/js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="/skin/js/index.js"></script>
+<script type="text/javascript" src="/skin/js/lrtk.js"></script>
+<style type="text/css">
+#main .right_info ul li {
+    border-bottom: 1px solid #dfdfdf;
+    display: table;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    width: 780px;
+}
+#main .right_info ul li h2 {
+    color: #444;
+    font-size: 18px;
+}
+#main .right_info ul li h2 a {
+    color: #444;
+    font-size: 18px;
+    padding: 0;
+}
+#main .right_info ul li h2 a:hover {
+    text-decoration: underline;
+}
+#main .right_info ul li a {
+    color: #444;
+    font-size: 12px;
+    line-height: 32px;
+    padding: 0 8px;
+    text-transform: uppercase;
+}
+#main .right_info ul li a:hover {
+    text-decoration: underline;
+}
+#main .right_info ul li span {
+    display: inline-block;
+    text-align: center;
+    width: 9px;
+}
+</style>
+</head>
+<body>
+{dede:include filename="head.htm"/}
+<div id="banner" class="width"><img width="1860" height="264" src="/skin/images/bn_about_02.jpg"></div>
+<div id="center" class="width">
+  <div id="main">
+    <div class="left">
+      <div class="title">
+        <h2>站点地图</h2>
+        <span>Site Map</span></div>
+      <div class="menu">
+        <ul>
+          <li class='cur'><a href="javascript:void(0);">站点地图</a></li>
+        </ul>
+      </div>
+      <div class="add"> <a href="/a/chanpin/"><img src="/skin/images/12_19.jpg" /></a> </div>
+    </div>
+    <div class="right">
+      <div class="crumbs"> <a href="/"><span></span>首页</a><span>站点地图</span> </div>
+      <div class="right_info">
+        <ul>
+		    {dede:channelartlist type='top'}
+		    <li>
+            <h2><a href='{dede:field name='typeurl'/}'>{dede:field name='typename' /}</a></h2>
+            {dede:channel type='son'  noself='yes'}
+			<a href='[field:typelink/]'>[field:typename/]</a><span>|</span>
+			{/dede:channel}
+			</li> 
+			{/dede:channelartlist}   
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+{dede:include filename="footer.htm"/}
+</body>
+</html>

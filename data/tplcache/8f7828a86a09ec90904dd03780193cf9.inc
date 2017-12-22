@@ -1,0 +1,1 @@
+<li><A href="" title="[field:title/]" target="_blank"><img src="[field:picname/]" width="171" height="91" /></A></li>

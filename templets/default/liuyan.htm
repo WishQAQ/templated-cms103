@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:field.title/}-{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="" />
+<meta name="description" content=""/>
+<link rel="shortcut icon" type="image/x-icon" href="/skin/images/favicon.ico" media="screen" />
+<link type="text/css" rel="stylesheet" href="/skin/css/global.css"/>
+<link type="text/css" rel="stylesheet" href="/skin/css/style2.css" />
+<script type="text/javascript" language="javascript" src="/skin/js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="/skin/js/index.js"></script>
+<script type="text/javascript" src="/skin/js/lrtk.js"></script>
+</head>
+<body>
+{dede:include filename="head.htm"/}
+<div id="banner" class="width"><img src='/skin/images/bn_about_02.jpg' width='1860' height='264'/></div>
+<div id="center" class="width">
+  <div id="main">
+    <div class="left">
+      <div class='title'>
+        <h2>关于我们</h2>
+        <span>About Us</span></div>
+      <div class="menu">
+        <ul>
+          {dede:channel row="10" type="son" col="1" currentstyle="<li class='cur'><a href='~typelink~' ~rel~>~typename~</a></li>" }
+		  <li><a href='[field:typeurl/]'>[field:typename/]</a></li>
+		  {/dede:channel} 
+        </ul>
+      </div>
+      <div class="add"> <a href="/a/chanpin/"><img src="/skin/images/12_19.jpg" /></a> </div>
+    </div>
+    <div class="right">
+      <div class="crumbs">{dede:field name='position'/}</div>
+      <div class="right_info">
+        <div class="s-zyfoot s-zxlys">
+      <div class="s-zxly">
+        <p>在线留言</p>
+      </div>
+      <div class="s-lybd">
+	  <form action="/plus/diy.php" enctype="multipart/form-data" method="post">
+<input type="hidden" name="action" value="post" />
+<input type="hidden" name="diyid" value="1" />
+<input type="hidden" name="do" value="2" />
+        <p class="txt">
+	     <label>姓　名</label>
+          <input class="nc" type="text" name="xingming1" id="xingming1" bs="{valdate:true}" mess="您的姓名">
+          <i>*</i> </p>
+        <p class="txt">
+          <label>手　机</label>
+          <input class="nc" type="text" name="shouji1" id="shouji1" bs="{valdate:true,tel:true}" mess="手机号码" maxlength="11" onkeyup="this.value=this.value.replace(/\D/g,'')">
+          <i>*</i> </p>
+        <p class="txt">
+          <label>地　址</label>
+          <input class="nc" type="text" name="dizhi1" id="dizhi1" bs="{valdate:true}" mess="联系地址">
+          <i>*</i> </p>
+        <p class="con">
+          <textarea name="neirong1" id="neirong1" bs="{valdate:true}" mess="留言内容" onblur="obl()" onfocus="ofs()">输入您的留言[必填]！</textarea>
+        </p>
+		<input type="hidden" name="dede_fields" value="xingming1,text;shouji1,text;dizhi1,text;neirong1,multitext" />
+<input type="hidden" name="dede_fieldshash" value="a910001f6563860a3372482e1143a3d8" />
+        <div class="s-lytj">
+          <input type="submit" name="submit" value="确认提交">
+		  </div>
+</form>
+
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+{dede:include filename="footer.htm"/}
+</body>
+</html>
